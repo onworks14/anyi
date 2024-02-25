@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Download Page</title>
-<style>
+  <title>Download Page</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
-        max-width: 80vw;
-        margin: 50px auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
+      max-width: 80vw;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
     h1 {
-        color: #333;
+      color: #333;
     }
 
     p {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .download-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
     }
 
     .download-button:hover {
-        background-color: #0056b3;
+      background-color: #0056b3;
     }
-</style>
+
+    .button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
     <h1>Download the Latest Version</h1>
     <p>Click the button below to download the latest version of our software.</p>
-    <a href="ay_1000.apk" class="download-button">Download APK</a>
+    <a href="ay_1000.apk" class="download-button">Download Anyi APK</a><br><br>
+    <a href="clash.apk" class="download-button">Download Clash APK</a>
+    <h2>Clash的URL配置:</h2>
+    <button class="button" onclick="copyToClipboard(0)">复制订阅链接1</button><br><br>
+    <button class="button" onclick="copyToClipboard(1)">复制订阅链接2</button><br><br>
+    <button class="button" onclick="copyToClipboard(2)">复制订阅链接3</button>
     <p>Note: Please make sure to allow downloads from unknown sources in your device settings.</p>
-</div>
+  </div>
+  <script>
+    var textArray = ["https://subs.zeabur.app/clash", "https://fku-ppg.co.uk/", "https://tt.vg/freeclash"];
+    function copyToClipboard(index) {
+      var text = textArray[index];
+      navigator.clipboard.writeText(text);
+    }
+  </script>
 </body>
+
 </html>
